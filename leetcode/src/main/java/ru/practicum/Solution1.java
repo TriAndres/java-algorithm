@@ -47,8 +47,57 @@ package ru.practicum;
 //1 <= n <= 10^4
 //senate[i] Это либо 'R', либо 'D'.
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution1 {
+
+    public static void main(String[] args) {
+        Solution1 s = new Solution1();
+
+        String line = "RDD";
+        System.out.println("Ввод: сенат = " + line);
+        System.out.println("Вывод: " + s.predictPartyVictory(line));
+
+        line = "RD";
+        System.out.println("\nВвод: сенат = " + line);
+        System.out.println("Вывод: " + s.predictPartyVictory(line));
+    }
     public String predictPartyVictory(String senate) {
-        return "String";
+        List<Character> list = new ArrayList<>();
+        for (char c : senate.toCharArray()) {
+            list.add(c);
+        }
+        while (true) {
+            int i = 0;
+            while (i < list.size()) {
+                if (!list.contains('R')) {
+                    return "Dire";
+                }
+                if (!list.contains('D')) {
+                    return "Radiant";
+                }
+                if (list.get(i) == 'R') {
+                    int j = (i + 1) % list.size();
+                    while (list.get(j) == 'R') {
+                        j = (i + 1) % list.size();
+                    }
+                    list.remove(j);
+                    if (j < i) {
+                        i--;
+                    }
+                } else {
+                    int j = (i +1) % list.size();
+                    while (list.get(j) == 'D') {
+                        j = (j + 1) % list.size();
+                    }
+                    list.remove(j);
+                    if (j < i) {
+                        i--;
+                    }
+                }
+                i++;
+            }
+        }
     }
 }
