@@ -1,0 +1,1 @@
+[Quick start](https://coderun.yandex.ru/selections/quickstart)

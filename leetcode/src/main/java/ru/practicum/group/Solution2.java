@@ -1,4 +1,4 @@
-package ru.practicum;
+package ru.practicum.group;
 /*
 1004. Max Consecutive Ones |||
 

@@ -1,4 +1,4 @@
-package ru.practicum;
+package ru.practicum.group;
 
 public class Solution7 {
 }

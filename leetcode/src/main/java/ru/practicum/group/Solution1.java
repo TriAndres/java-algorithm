@@ -1,4 +1,4 @@
-package ru.practicum;
+package ru.practicum.group;
 /*
 649. Dota2 Senate
 В мире Dota2 есть две фракции: Radiant и Dire.

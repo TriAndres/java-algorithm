@@ -1,4 +1,4 @@
-package ru.practicum;
+package ru.practicum.group;
 /*
 1207. Unique Number of Occurrences
 

@@ -1,4 +1,4 @@
-package ru.practicum;
+package ru.practicum.group;
 /*
 933. Number of Recent Calls
 У вас есть RecentCounter класс, который подсчитывает количество недавних запросов за определенный период времени.
